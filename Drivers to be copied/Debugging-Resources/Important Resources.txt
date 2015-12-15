@@ -1,0 +1,21 @@
+Explanation about Node-Red
+-------------------------------
+
+https://www.ibm.com/developerworks/community/blogs/enablingwithbluemix?lang=en
+
+Working With MRAA
+-------------------------
+http://www.rs-online.com/designspark/electronics/eng/blog/wiring-the-internet-of-things-with-intel-edison-and-node-red
+
+Node red directory
+=====================
+/usr/lib/node_modules/node-red/nodes
+
+
+var mraa = require('mraa');
+
+var pin2 = new mraa.Gpio(13);
+
+pin2.dir(mraa.DIR_OUT);
+
+pin2.write(0);

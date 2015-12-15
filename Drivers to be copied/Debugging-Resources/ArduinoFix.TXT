@@ -1,0 +1,19 @@
+
+create a file by name startsketch.sh
+
+vi startsketch.sh
+
+then paste following content
+--------------------------
+
+#!/bin/sh
+exec /sketch/sketch.elf /dev/ttygc0 /dev/ttygc0
+---------------------------------------------
+
+:esc wq enter
+
+mv /startsketch.sh /etc/init.d/  <---- imp
+chmod +x /etc/init.d/startsketch.sh
+update-rc.d startsketch.sh defaults  
+
+That's all reboot and each time you start edison, Arduino  sketch will start automatically

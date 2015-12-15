@@ -1,0 +1,18 @@
+Download
+========
+wget http://mosquitto.org/files/source/mosquitto-1.3.5.tar.gz
+
+Untar
+================================
+tar xzf mosquitto-1.3.5.tar.gz --no-same-owner
+
+
+cd mosquitto-1.3.5
+
+Make
+====
+make WITH_SRV=no
+add user mosquitto
+
+
+

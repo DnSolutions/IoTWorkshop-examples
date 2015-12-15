@@ -1,0 +1,19 @@
+Calling
+================
+curl -H 'SOAPACTION: "http://tempuri.org/GetCommand"'   -X POST -H 'Content-type: text/xml' -d  @request.xml grasshoppernetwork.com/Hardware.asmx > result.xml
+xmllint --xpath 'string(//GetCommandResult)' result.xml
+
+
+
+xmllint --xpath "//*[local-name()='GetCommandResult']/text()" result.xml > a.txt
+
+===================================
+http://grasshoppernetwork.com/Encryption.asmx
+
+curl -H 'SOAPACTION: "http://tempuri.org/Encrypt"'   -X POST -H 'Content-type: text/xml' -d  @req.xml grasshoppernetwork.com/Encryption.asmx > result1.xml
+
+
+xmllint --xpath "//*[local-name()='EncryptResult']/text()" result1.xml
+
+
+curl -H 'SOAPACTION: "http://tempuri.org/Factorial"'   -X POST -H 'Content-type: text/xml' -d  @req.xml grasshoppernetwork.com/SSIT.asmx

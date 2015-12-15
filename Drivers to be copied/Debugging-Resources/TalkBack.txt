@@ -1,0 +1,19 @@
+GEKNXHKSXVSEQH5M 2991
+1	117866	LIGHT_VALUE
+2	117867	BUTTON_VALUE
+
+Viewing All Commands
+==========================
+
+https://api.thingspeak.com/talkbacks/2991/commands?api_key=GEKNXHKSXVSEQH5M
+
+
+Adding a commands
+====================
+ curl --data "api_key=GEKNXHKSXVSEQH5M&command_string=MOTOR_MOVE" https://api.thingspeak.com/talkbacks/2991/commands
+
+
+Executing a Command
+====================
+curl --data  "api_key=GEKNXHKSXVSEQH5M" https://api.thingspeak.com/talkbacks/2991/commands/execute > ts.txt
+     

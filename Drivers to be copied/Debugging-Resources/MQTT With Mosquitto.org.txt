@@ -1,0 +1,7 @@
+For Sending Command
+====================
+mosquitto_pub -h test.mosquitto.org -p 1883 -t rupam/data -m "SOME_COMMAND"
+
+For Receiving
+==================
+ mosquitto_sub -h test.mosquitto.org  -p 1883 -t rupam/data

@@ -1,0 +1,6 @@
+web based--> npm: nodes package manager
+npm install -g node-red
+
+Node red directory
+=====================
+/usr/lib/node_modules/node-red/nodes

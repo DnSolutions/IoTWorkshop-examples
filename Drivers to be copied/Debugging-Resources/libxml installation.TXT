@@ -1,0 +1,8 @@
+cd /tmp
+wget ftp://xmlsoft.org/libxml2/libxml2-2.8.0.tar.gz
+tar xzf libxml2-2.8.0.tar.gz
+cd libxml2-2.8.0/
+./configure
+make
+sudo make install
+cd

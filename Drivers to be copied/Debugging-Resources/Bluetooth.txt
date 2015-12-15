@@ -1,0 +1,11 @@
+rfkill unblock bluetooth
+     bluetoothctl
+
+agent KeyboardDisplay
+     default-agent
+
+ pair <Device ID>
+scan on
+
+connect <Device ID>
+discoverable on

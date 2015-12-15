@@ -1,0 +1,1 @@
+mosquitto_pub -h m2m.eclipse.org -p 1883  -q 0 -t "rupam/data" -m "IoT Rocks" -M 128 -d

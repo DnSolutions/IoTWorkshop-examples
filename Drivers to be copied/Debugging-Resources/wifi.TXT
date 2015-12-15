@@ -1,0 +1,3 @@
+configure_edison --wifi
+wpa_cli -i wlan0 status
+configure_edison --server

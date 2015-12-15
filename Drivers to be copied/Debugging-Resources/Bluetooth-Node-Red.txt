@@ -1,0 +1,32 @@
+1) Unblock Bluetooth:
+rfkill unblock bluetooth
+
+2) Login to Bluetooth Console
+bluetoothctl
+
+3) Make discoverable
+discoverable on
+
+4) scan the device:
+scan on
+5) once the device is seen in list, ctrl+c
+6) pair <DEv_ID>
+7) connect <DEv_ID>
+8) trust <DEv_ID>
+9) Download Android bluetooth SPP app
+https://play.google.com/store/apps/details?id=mobi.dzs.android.BLE_SPP_PRO&hl=en
+10) Now we need to follow an Intel Tutorial Here:==>
+https://software.intel.com/en-us/blogs/2015/05/19/communicate-to-arduino-code-with-your-android-phone-by-bluetooth-serial-port
+a) download :https://software.intel.com/sites/default/files/managed/6c/16/bluetooth-service.tar.gz
+b) using WinScp to upload the file to /home/root
+c) untar the package
+mkdir /home/root/bluetooth
+cd /home/root/bluetooth
+mv /home/root/bluetooth-service.tar.gz ./
+tar -xvf bluetooth-service.tar.gz
+d) Prepare for Bluetooth at startup
+cp bluetooth-spp-pin.service /lib/systemd/system
+e) systemctl enable bluetooth-spp-pin
+f) reboot
+g) after login back:
+systemctl status bluetooth-spp-pin
